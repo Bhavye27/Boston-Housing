@@ -13519,7 +13519,9 @@ R-squared is a statistical measure of how close the data are to the regression l
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> We split the data into training and testing subsets, so that we have an accurate prediction of the testing subset by training our data. If we take large part of our dataset into the training subset , then overfitting will occur and if we take the large part for testing then underfitting will occur. To maintain a proper balance between both of them and for a good fit, the data is splitted into training and testing subsets in a balanced ratio.</p>
+<p><strong>Answer:</strong> We split the data into training and testing subsets, so that we have an accurate prediction of the testing subset by training our data. If we take large part of our dataset into the training subset , then overfitting will occur and if we take the large part for testing then underfitting will occur. To maintain a proper balance between both of them and for a good fit, the data is splitted into training and testing subsets in a balanced ratio.
+Suppose we use all our data for training.Our model might overfit or underfit or it might be a good fit as well. If our model is underfitting we will know that from our train scores (which will be low). But if our model is overfitting, our train scores will be high. By first look it would seem we have done a great job in training, but most probably we have not. It is only after we test our model with the test set that we will know the real performance of our model. Using part of train set to test will always give good results if we are getting good train score (since our model is biased towards that data)</p>
+<p>That’s why we always need a test set. But while training we cannot use our test set performance to improve our model, because that would make our model biased towards the test set. Hence we need to do cross-validation.</p>
 
 </div>
 </div>
